@@ -72,6 +72,15 @@
         /*$(document).on('deviceready',function(){
             alert("asd");
         });*/
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        alert("listo");
+        navigator.splashscreen.show();
+    }
     </script>
 </body>
 
