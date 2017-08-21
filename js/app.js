@@ -1,5 +1,5 @@
 $(document).on('deviceready',function(){
-    //navigator.splashscreen.show();
+    navigator.splashscreen.hide();
     $(".btnEnviar").click(function(){
        curp = $("#curp").val();
         longitud = curp.length;
@@ -22,15 +22,12 @@ $(document).on('deviceready',function(){
         if(activePage==('index')){
             e.preventDefault(); 
             navigator.notification.confirm(
-                "Do you want to exit the app?",
+                "Realmente desea salir de la app?",
                 function (button) {
                   if (button==2) {
                     navigator.app.exitApp();
                   }
-                }
-                ,
-                "EXIT",
-                ["Cancel","Ok"]
+                },"Pregunta", ["Cancelar","Ok"]
             );
         }
         else {
