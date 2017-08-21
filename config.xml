@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="gob.mx.seslp.calificaciones" xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" versionCode = "10" version = "1.0.0" >
+<widget id="gob.mx.seslp.calificaciones" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Calificaciones SLP v2</name>
     <description>
         Consulta calificaciones a partir del Ciclo Escolar 2013-2014, certificados a partir del Ciclo Escolar 2016-2017, avisos importantes para la comunidad educativa y calendarios del Ciclo Escolar vigente.
     </description>
     <author email="jreyes@cpte.gob.mx" href="http://cpte.gob.mx">
-        Centro Potosino de Tecnología Eductiva [CPTE]
+        CPTE
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
