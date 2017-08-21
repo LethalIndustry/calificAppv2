@@ -11,8 +11,9 @@
 	<splash  src="splash.png" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+	<icon src="icon.png" />
 	<preference name="splashscreen" value="screen" />
-	<preference name="splashScreenDelay" value="10000" />
+	<preference name="splashScreenDelay" value="300" />
     <plugin name="cordova-plugin-device-orientation" spec="1.0.7" />
 	<plugin name="cordova-plugin-dialogs" spec="1.2.1" />
 	<plugin name="cordova-plugin-file" spec="4.1.1" />
