@@ -14,34 +14,34 @@ $(document).on('deviceready',function(){
                 $.mobile.changePage("#menu", {transition: "slide", changeHash: false });
             }
         } 
-    })  
+    });
+
+    document.addEventListener("backbutton", function(e){
+        if($.mobile.activePage.is('#index')){
+            /* 
+             Event preventDefault/stopPropagation not required as adding backbutton
+              listener itself override the default behaviour. Refer below PhoneGap link.
+            */
+            //e.preventDefault();
+
+            navigator.notification.confirm(
+                "Do you want to exit the app?",
+                function (button) {
+                  if (button==2) {
+                    navigator.app.exitApp();
+                  }
+                }
+                ,
+                "EXIT",
+                ["Cancel","Ok"]
+            );
+        }
+        else {
+            navigator.app.backHistory();
+            //$.mobile.changePage("#menu", {transition: "slide", changeHash: false });
+        }
+    }, false);
 });
-
-document.addEventListener("backbutton", function(e){
-    if($.mobile.activePage.is('#index')){
-        /* 
-         Event preventDefault/stopPropagation not required as adding backbutton
-          listener itself override the default behaviour. Refer below PhoneGap link.
-        */
-        //e.preventDefault();
-
-        navigator.notification.confirm(
-            "Do you want to exit the app?",
-            function (button) {
-              if (button==2) {
-                navigator.app.exitApp();
-              }
-            }
-            ,
-            "EXIT",
-            ["Cancel","Ok"]
-        );
-    }
-    else {
-        //navigator.app.backHistory();
-        $.mobile.changePage("#menu", {transition: "slide", changeHash: false });
-    }
-}, false);
 
 function alertDismissed() {
     // do something
