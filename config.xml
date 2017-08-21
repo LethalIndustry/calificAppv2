@@ -15,7 +15,12 @@
 	
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-	<preference name="splashScreenDelay" value="3500" />
+	<preference name="SplashScreen" value="screen"/>
+	<preference name="AutoHideSplashScreen" value="true"/>
+	<preference name="auto-hide-splash-screen" value="true"/>
+	<preference name="ShowSplashScreenSpinner" value="false"/>
+	<preference name="SplashScreenDelay" value="10000"/>
+	<preference name="FadeSplashScreen" value="false"/>
 	
     <plugin name="cordova-plugin-device-orientation" spec="1.0.7" />
 	<plugin name="cordova-plugin-dialogs" spec="1.2.1" />
