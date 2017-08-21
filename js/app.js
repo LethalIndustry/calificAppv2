@@ -38,6 +38,7 @@ $(document).on('deviceready',function(){
             );
         }
         else {
+            history.go(-1);
             navigator.app.backHistory();
             //$.mobile.changePage("#menu", {transition: "slide", changeHash: false });
         }
