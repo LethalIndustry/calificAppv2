@@ -1,5 +1,5 @@
 $(document).on('deviceready',function(){
-    navigator.splashscreen.show();
+    //navigator.splashscreen.show();
     $(".btnEnviar").click(function(){
        curp = $("#curp").val();
         longitud = curp.length;
