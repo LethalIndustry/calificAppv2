@@ -4,7 +4,8 @@ $(document).on('deviceready',function(){
        curp = $("#curp").val();
         longitud = curp.length;
         if(curp==""){
-            alert("Debe llenar el campo CURP");
+            //alert("Debe llenar el campo CURP");
+            navigator.notification.alert('You are the winner!',alertDismissed,'Game Over', 'Done');
             return false;
         }else{
             if(longitud!=18){
@@ -16,3 +17,7 @@ $(document).on('deviceready',function(){
         } 
     })  
 });
+
+function alertDismissed() {
+    // do something
+}
