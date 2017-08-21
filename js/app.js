@@ -20,10 +20,6 @@ $(document).on('deviceready',function(){
         var activePage = $.mobile.activePage.attr("id");
         alert(activePage);
         if(activePage==('index')){
-            /* 
-             Event preventDefault/stopPropagation not required as adding backbutton
-              listener itself override the default behaviour. Refer below PhoneGap link.
-            */
             e.preventDefault(); 
             navigator.notification.confirm(
                 "Do you want to exit the app?",
@@ -38,7 +34,7 @@ $(document).on('deviceready',function(){
             );
         }
         else {
-            $.mobile.changePage("#index", {transition: "slide", changeHash: false });
+            $.mobile.changePage("#index", {transition: "slide", reverse: true, changeHash: false });
         }
     }, false);
 });
