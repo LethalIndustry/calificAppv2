@@ -1,13 +1,9 @@
 $(document).on('deviceready',function(){
     //navigator.splashscreen.hide();
-    var devicePlatform = device.platform;
-    alert(devicePlatform);
-    //   - "Android"
-    //   - "BlackBerry"
-    //   - "iOS"
-    //   - "webOS"
-    //   - "WinCE"
-    //   - "Tizen"
+    var name=device.name ;
+    var plat=device.platform;
+    alert(name);
+    alert(plat);
     $(".btnEnviar").click(function(){
         curp = $("#curp").val();
         longitud = curp.length;
