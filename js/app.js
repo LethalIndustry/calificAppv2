@@ -1,7 +1,5 @@
 $(document).on('deviceready',function(){
     //navigator.splashscreen.hide();
-    var plat=device.platform;
-    alert(plat);
     $(".btnEnviar").click(function(){
         curp = $("#curp").val();
         longitud = curp.length;
