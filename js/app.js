@@ -30,8 +30,11 @@ $(document).on('deviceready',function(){
                 },"Pregunta", ["Cancelar","Ok"]
             );
         }
-        else {
+        if(activePage==('menu')){
             $.mobile.changePage("#index", {transition: "slide", reverse: true, changeHash: false });
+        }
+        if(activePage==('calendario')){
+            $.mobile.changePage("#menu", {transition: "slide", reverse: true, changeHash: false });
         }
     }, false);
 });
