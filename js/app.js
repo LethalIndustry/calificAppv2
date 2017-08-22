@@ -1,7 +1,7 @@
 $(document).on('deviceready',function(){
-    navigator.splashscreen.hide();
+    //navigator.splashscreen.hide();
     $(".btnEnviar").click(function(){
-       curp = $("#curp").val();
+        curp = $("#curp").val();
         longitud = curp.length;
         if(curp==""){
             navigator.notification.alert('Debe llenar el campo CURP',alertDismissed,'Error', 'Ok');
@@ -18,7 +18,7 @@ $(document).on('deviceready',function(){
 
     document.addEventListener("backbutton", function(e){
         var activePage = $.mobile.activePage.attr("id");
-        alert(activePage);
+        //alert(activePage);
         if(activePage==('index')){
             e.preventDefault(); 
             navigator.notification.confirm(
