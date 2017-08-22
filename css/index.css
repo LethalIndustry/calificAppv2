@@ -91,6 +91,16 @@ input {
     margin-top: 15px;
 }
 
+.header{
+    background-color: #F05D59 !important; 
+    font-size: 18px; 
+    color: #ffffff !important;
+    text-align: center;
+    text-shadow: none !important;
+    padding-top: 5px;
+    padding-bottom: 5px !important;
+}
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .logIn{
