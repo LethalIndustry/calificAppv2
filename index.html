@@ -81,7 +81,13 @@
     <!--PAGINA DE CALENDARIO-->
     <div data-role="page" id="calendario">
         <div data-role="header" class="header" >
-            CALENDARIO ESCOLAR
+            <a class="btnBack" href="#">
+                <span style="font-size: 16px; padding-top: 3%;">&laquo;</span>
+            </a>  
+
+            <div>
+                <img width="35px;" src="img/calendario.png" style="vertical-align: middle;">  CALENDARIO ESCOLAR
+            </div>
         </div>
         <div data-role="content" class="ui-content" style="text-align: center; margin-top: 10px;">
             <div class="opcionCalendario">
@@ -138,15 +144,14 @@
             alert("asd");
         });*/
 
-        document.addEventListener("deviceready", onDeviceReady, false);
+     /*   document.addEventListener("deviceready", onDeviceReady, false);
 
     // device APIs are available
     //
     function onDeviceReady() {
-       var deviceType = (navigator.userAgent.match(/iPad/i))  == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i))  == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
-
-alert(deviceType);
-    }
+        alert("listo");
+        navigator.splashscreen.show();
+    }*/
     </script>
 </body>
 
