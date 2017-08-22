@@ -92,13 +92,21 @@ input {
 }
 
 .header{
+    height: 35px;
     background-color: #F05D59 !important; 
     font-size: 18px; 
     color: #ffffff !important;
     text-align: center;
     text-shadow: none !important;
-    padding-top: 5px;
+    padding-top: 2%;
     padding-bottom: 5px !important;
+}
+
+.btnBack{
+    background-color: #F05D59 !important;
+    border-color: #ddd;
+    color: #fff !important;
+    text-shadow: none !important;
 }
 
 /* Landscape layout (with min-width) */

@@ -1,5 +1,10 @@
 $(document).on('deviceready',function(){
     //navigator.splashscreen.hide();
+    var deviceType = (navigator.userAgent.match(/iPad/i))  == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i))  == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+    if(deviceType=="Android"){
+        $(".btnBack").hide();
+    }
+    
     $(".btnEnviar").click(function(){
         curp = $("#curp").val();
         longitud = curp.length;
@@ -14,6 +19,10 @@ $(document).on('deviceready',function(){
                 $.mobile.changePage("#menu", {transition: "slide", changeHash: false });
             }
         } 
+    });
+
+    $(".btnBack").click(function(){
+        $.mobile.changePage("#menu", {transition: "slide", reverse: true, changeHash: false });
     });
 
     document.addEventListener("backbutton", function(e){
