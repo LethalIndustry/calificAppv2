@@ -78,6 +78,15 @@ input {
     box-sizing: border-box;
 }
 
+.imgBanner{
+    width: 80%;
+}
+
+.opcionMenu{
+    width: 60%;
+    margin-top: 10px;   
+}
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .logIn{
