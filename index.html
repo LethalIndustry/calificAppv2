@@ -43,6 +43,7 @@
 </head>
 
 <body>
+    <!--PAGINA DE INDEX-->
     <div data-role="page" id="index">
         <div data-role="content" class="ui-content logIn">
             <div class="ui-grid-a">
@@ -57,20 +58,29 @@
             </div><!-- /grid-a -->
         </div>
 
-        <div data-role="footer">
+        <div data-role="footer" class="footer">
             <img width="300px;" src="img/logoSege.png">
         </div>
     </div>
-
+    <!--PAGINA DE MENU-->
     <div data-role="page" id="menu">
-        Menu
+        <div data-role="content" class="ui-content" style="text-align: center; margin-top: 50px;">
+            <img class="opcionMenu" src="img/mCalificaciones.png">
+            <img class="opcionMenu" src="img/mCertificado.png">
+            <img class="opcionMenu" src="img/mAvisos.png">
+            <img class="opcionMenu" src="img/mCalendario.png">
+        </div>
+
+        <div data-role="footer" data-position="fixed" style="text-align: center;">
+            <img class="imgBanner" src="img/calificacionesSLP.png">
+        </div>
     </div>
 
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <!--<script type="text/javascript" src="js/index.js"></script>-->
-    <script type="text/javascript" src="js/app.js?"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript">
         //app.initialize();
         /*$(document).on('deviceready',function(){
