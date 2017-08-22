@@ -1,8 +1,6 @@
 $(document).on('deviceready',function(){
     //navigator.splashscreen.hide();
-    var name=device.name ;
     var plat=device.platform;
-    alert(name);
     alert(plat);
     $(".btnEnviar").click(function(){
         curp = $("#curp").val();
