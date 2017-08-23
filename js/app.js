@@ -1,35 +1,34 @@
 $(document).on('deviceready',function(){
-    //navigator.splashscreen.hide();
-    var deviceType = (navigator.userAgent.match(/iPad/i))  == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i))  == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+    /*var deviceType = (navigator.userAgent.match(/iPad/i))  == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i))  == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
     if(deviceType=="Android"){
         $(".btnBack").hide();
-    }
+    }*/
+	
+	FastClick.attach(document.body);
     
     $(".btnEnviar").click(function(){
         curp = $("#curp").val();
         longitud = curp.length;
         if(curp==""){
             navigator.notification.alert('Debe llenar el campo CURP',alertDismissed,'Error', 'Ok');
-            return false;
         }else{
             if(longitud!=18){
                 navigator.notification.alert('El campo CURP debe contener 18 caracteres',alertDismissed,'Error', 'Ok');
-                return false;
             }else{
-                $.mobile.changePage("#menu", {transition: "slide", changeHash: false });
+                $.mobile.changePage("#menu", {transition: "none", changeHash: false });
             }
         } 
     });
 
     $(".btnBack").click(function(){
-        $.mobile.changePage("#menu", {transition: "slide", reverse: true, changeHash: false });
+        $.mobile.changePage("#menu", {transition: "none", changeHash: false });
     });
 
     document.addEventListener("backbutton", function(e){
         var activePage = $.mobile.activePage.attr("id");
         //alert(activePage);
         if(activePage==('index')){
-            e.preventDefault(); 
+            //e.preventDefault(); 
             navigator.notification.confirm(
                 "Realmente desea salir de la app?",
                 function (button) {
@@ -40,10 +39,10 @@ $(document).on('deviceready',function(){
             );
         }
         if(activePage==('menu')){
-            $.mobile.changePage("#index", {transition: "slide", reverse: true, changeHash: false });
+            $.mobile.changePage("#index", {transition: "none", changeHash: false });
         }
         if(activePage==('calendario')){
-            $.mobile.changePage("#menu", {transition: "slide", reverse: true, changeHash: false });
+            $.mobile.changePage("#menu", {transition: "none", changeHash: false });
         }
     }, false);
 });

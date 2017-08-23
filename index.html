@@ -1,24 +1,5 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 <head>
@@ -67,8 +48,10 @@
         <div data-role="content" class="ui-content" style="text-align: center; margin-top: 50px;">
             <img class="opcionMenu" src="img/mCalificaciones.png">
             <img class="opcionMenu" src="img/mCertificado.png">
-            <img class="opcionMenu" src="img/mAvisos.png">
-            <a href="#calendario" data-transition="slide">
+            <a href="#avisos" data-transition="none">
+                <img class="opcionMenu" src="img/mAvisos.png">
+            </a>
+            <a href="#calendario" data-transition="none">
                 <img class="opcionMenu" src="img/mCalendario.png">
             </a>
         </div>
@@ -133,26 +116,44 @@
         </div>
     </div>
 
+    <!--PAGINA DE AVISOS-->
+    <div data-role="page" id="avisos">
+        <div data-role="header" class="header colorAvisos" >
+            <a class="btnBack colorAvisos" href="#">
+                <span style="font-size: 16px; padding-top: 3%;">&laquo;</span>
+            </a>  
+
+            <div>
+                <img width="35px;" src="img/aviso.png" style="vertical-align: middle;">  AVISOS
+            </div>
+        </div>
+        <div data-role="content" class="ui-content" style="text-align: center; margin-top: 10px;">
+            
+            
+            <div class="opcionCalendario">
+                <div>
+                    <a href="#" onClick="window.open('http://cpte.gob.mx/appCalificaciones/images/pdf/Calendario_185.pdf', '_system', 'location=yes')";>
+                        <div>
+                            <img width="60%" src="img/185Dias.png">
+                        </div>
+                        <div>
+                            <img width="55%" src="img/185DiasC.png">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-id="footer" data-position="fixed" style="text-align: center;">
+            <img class="imgBanner" src="img/calificacionesSLP.png">
+        </div>
+    </div>
+
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <!--<script type="text/javascript" src="js/index.js"></script>-->
+	<script type='application/javascript' src='js/fastclick.js'></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript">
-        //app.initialize();
-        /*$(document).on('deviceready',function(){
-            alert("asd");
-        });*/
-
-     /*   document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        alert("listo");
-        navigator.splashscreen.show();
-    }*/
-    </script>
 </body>
 
 </html>
