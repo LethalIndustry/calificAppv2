@@ -3,7 +3,8 @@ $(document).on('deviceready',function(){
     if(deviceType=="Android"){
         $(".btnBack").hide();
     }*/
-    
+    active = activePage();
+    alert(active);
     $(".btnEnviar").click(function(){
         curp = $("#curp").val();
         longitud = curp.length;
@@ -20,7 +21,8 @@ $(document).on('deviceready',function(){
                       url: "menu.html",
                       success: function(result) {
                             $("#contenido").html(result).trigger("create");
-                            $.mobile.loading('hide');
+                           active = activePage();
+                            alert(active);
                       }
               });                
             }
@@ -28,10 +30,13 @@ $(document).on('deviceready',function(){
     });
 
     $("#contenido").on("click", ".calendario" ,function(){
+      
       $.ajax({
           url: "calendario.html",
           success: function(result) {
                 $("#contenido").html(result).trigger("create");
+                active = activePage();
+                alert(active);
           }
           });
     });
@@ -41,7 +46,9 @@ $(document).on('deviceready',function(){
     });
 
     document.addEventListener("backbutton", function(e){
-        var activePage = $.mobile.activePage.attr("id");
+        //var activePage = $.mobile.activePage.attr("id");
+        active = activePage();
+        alert(active);
         if(activePage==('index')){
             e.preventDefault(); 
             navigator.notification.confirm(
@@ -64,4 +71,9 @@ $(document).on('deviceready',function(){
 
 function alertDismissed() {
     // do something
+}
+
+function activePage(){
+    var active = $("div:jqmData(role='page')").attr("id");
+    return active;
 }
