@@ -62,7 +62,8 @@ $(document).on('deviceready',function(){
         }
         if(active==('menu')){
             //$.mobile.changePage("#index", {transition: "none", changeHash: false });
-            $.mobile.loading('show');
+            //$.mobile.loading('show');
+            alert("esta en opcion menu");
             $.ajax({
               url: "login.html",
               success: function(result) {
