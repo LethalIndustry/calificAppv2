@@ -3,8 +3,8 @@ $(document).on('deviceready',function(){
     if(deviceType=="Android"){
         $(".btnBack").hide();
     }*/
-    active = activePage();
-    alert(active);
+    //active = activePage();
+   // alert(active);
     $(".btnEnviar").click(function(){
         curp = $("#curp").val();
         longitud = curp.length;
@@ -21,8 +21,8 @@ $(document).on('deviceready',function(){
                       url: "menu.html",
                       success: function(result) {
                             $("#contenido").html(result).trigger("create");
-                           active = activePage();
-                            alert(active);
+                           //active = activePage();
+                            //alert(active);
                       }
               });                
             }
@@ -35,8 +35,8 @@ $(document).on('deviceready',function(){
           url: "calendario.html",
           success: function(result) {
                 $("#contenido").html(result).trigger("create");
-                active = activePage();
-                alert(active);
+                //active = activePage();
+                //alert(active);
           }
           });
     });
@@ -48,7 +48,7 @@ $(document).on('deviceready',function(){
     document.addEventListener("backbutton", function(e){
         //var activePage = $.mobile.activePage.attr("id");
         active = activePage();
-        alert(active);
+        //alert(active);
         if(active==('index')){
             e.preventDefault(); 
             navigator.notification.confirm(
@@ -70,8 +70,8 @@ $(document).on('deviceready',function(){
                 url: "menu.html",
                 success: function(result) {
                     $("#contenido").html(result).trigger("create");
-                    active = activePage();
-                    alert(active);
+                    //active = activePage();
+                   // alert(active);
                 }
             });
         }
