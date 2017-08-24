@@ -61,7 +61,9 @@ $(document).on('deviceready',function(){
             );
         }
         if(active==('menu')){
-            $.mobile.changePage("#index", {transition: "none", changeHash: false });
+            //$.mobile.changePage("#index", {transition: "none", changeHash: false });
+            $.mobile.loading('show');
+            location.reload();
         }
         if(active==('calendario')){
             $.ajax({
