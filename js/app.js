@@ -63,7 +63,7 @@ $(document).on('deviceready',function(){
         if(active==('menu')){
             //$.mobile.changePage("#index", {transition: "none", changeHash: false });
             $.mobile.loading('show');
-            location.reload();
+            location.reload(true);
         }
         if(active==('calendario')){
             $.ajax({
