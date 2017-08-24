@@ -62,8 +62,8 @@ $(document).on('deviceready',function(){
         }
         if(active==('menu')){
             //$.mobile.changePage("#index", {transition: "none", changeHash: false });
-            $.mobile.loading('show');
-            window.location.href="index.html";
+            //$.mobile.loading('show');
+            $.mobile.changePage("index.html", {transition: "none", changeHash: false });
         }
         if(active==('calendario')){
             $.ajax({
