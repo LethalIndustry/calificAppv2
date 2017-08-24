@@ -3,21 +3,37 @@ $(document).on('deviceready',function(){
     if(deviceType=="Android"){
         $(".btnBack").hide();
     }*/
-	
-	FastClick.attach(document.body);
     
     $(".btnEnviar").click(function(){
         curp = $("#curp").val();
         longitud = curp.length;
         if(curp==""){
             navigator.notification.alert('Debe llenar el campo CURP',alertDismissed,'Error', 'Ok');
+            return false;
         }else{
             if(longitud!=18){
                 navigator.notification.alert('El campo CURP debe contener 18 caracteres',alertDismissed,'Error', 'Ok');
+                return false;
             }else{
-                $.mobile.changePage("#menu", {transition: "none", changeHash: false });
+                $.ajax({
+                      url: "menu.html",
+                      async: false,
+                      success: function(result) {
+                            $("#contenido").html(result).trigger("create");
+                      }
+              });                
             }
         } 
+    });
+
+    $("#contenido").on("click", ".calendario" ,function(){
+      $.ajax({
+          url: "calendario.html",
+          async: false,
+          success: function(result) {
+                $("#contenido").html(result).trigger("create");
+          }
+          });
     });
 
     $(".btnBack").click(function(){
@@ -28,7 +44,7 @@ $(document).on('deviceready',function(){
         var activePage = $.mobile.activePage.attr("id");
         //alert(activePage);
         if(activePage==('index')){
-            //e.preventDefault(); 
+            e.preventDefault(); 
             navigator.notification.confirm(
                 "Realmente desea salir de la app?",
                 function (button) {
