@@ -49,7 +49,7 @@ $(document).on('deviceready',function(){
         //var activePage = $.mobile.activePage.attr("id");
         active = activePage();
         alert(active);
-        if(activePage==('index')){
+        if(active==('index')){
             e.preventDefault(); 
             navigator.notification.confirm(
                 "Realmente desea salir de la app?",
@@ -60,10 +60,10 @@ $(document).on('deviceready',function(){
                 },"Pregunta", ["Cancelar","Ok"]
             );
         }
-        if(activePage==('menu')){
+        if(active==('menu')){
             $.mobile.changePage("#index", {transition: "none", changeHash: false });
         }
-        if(activePage==('calendario')){
+        if(active==('calendario')){
             $.mobile.changePage("#menu", {transition: "none", changeHash: false });
         }
     }, false);
