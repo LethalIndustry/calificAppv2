@@ -15,11 +15,12 @@ $(document).on('deviceready',function(){
                 navigator.notification.alert('El campo CURP debe contener 18 caracteres',alertDismissed,'Error', 'Ok');
                 return false;
             }else{
+                $.mobile.loading('show');
                 $.ajax({
                       url: "menu.html",
-                      async: false,
                       success: function(result) {
                             $("#contenido").html(result).trigger("create");
+                            $.mobile.loading('hide');
                       }
               });                
             }
@@ -29,7 +30,6 @@ $(document).on('deviceready',function(){
     $("#contenido").on("click", ".calendario" ,function(){
       $.ajax({
           url: "calendario.html",
-          async: false,
           success: function(result) {
                 $("#contenido").html(result).trigger("create");
           }
@@ -42,7 +42,6 @@ $(document).on('deviceready',function(){
 
     document.addEventListener("backbutton", function(e){
         var activePage = $.mobile.activePage.attr("id");
-        //alert(activePage);
         if(activePage==('index')){
             e.preventDefault(); 
             navigator.notification.confirm(
