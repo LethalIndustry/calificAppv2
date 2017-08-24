@@ -64,7 +64,14 @@ $(document).on('deviceready',function(){
             $.mobile.changePage("#index", {transition: "none", changeHash: false });
         }
         if(active==('calendario')){
-            $.mobile.changePage("#menu", {transition: "none", changeHash: false });
+            $.ajax({
+                url: "menu.html",
+                success: function(result) {
+                    $("#contenido").html(result).trigger("create");
+                    active = activePage();
+                    alert(active);
+                }
+            });
         }
     }, false);
 });
